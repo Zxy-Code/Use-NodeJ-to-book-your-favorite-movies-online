@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>首页</title>
+    <link rel="stylesheet" href="../public/css/typo.css">
+    <style>
+        body{
+            background-color: #3a4563;
+        }
+        #login{
+            margin:230px auto auto;
+            /*background: #ffd5d5;*/
+            width: 250px;
+            height:250px;
+            /*border:1px solid green;*/
+            /*-webkit-border-radius: 4px;*/
+            /*-moz-border-radius: 4px;*/
+            /*border-radius: 4px;*/
+            text-align: center;
+        }
+        #username,#password{
+            padding-left:8px;
+            width:94%;
+            margin-top:20px;
+            height:30px;
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            border-radius: 4px;
+        }
+        #button{
+            margin-top: 20px;
+            webkit-display:flex;
+            display: flex;
+            justify-content:space-around;
+        }
+        #button a {
+            padding:0 44px;
+            display: inline-block;
+            color: #ffffff;
+            font-size: 16px;
+            line-height: 30px;
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            border-radius: 4px;
+            text-decoration: none;
+            background-color: #667cdf;
+        }
+    </style>
+<body>
+    <div id="login">
+        <form action="">
+            <input id="username" type="text" name="username" placeholder='请输入用户名'>
+            <br>
+            <input id="password" type="password" name="password">
+            <br>
+            <div id="button">
+                <a class="login" href="javascript:void(0)">登录</a>
+                <a class="reg" href="javascript:void(0)">注册</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
+<script src="../public/js/jquery.js"></script>
+<script src="../public/js/index.js"></script>

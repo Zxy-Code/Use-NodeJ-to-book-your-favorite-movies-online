@@ -1,0 +1,9 @@
+$(function(){
+    alert(2)
+    $('.login').on(function(){
+        $.ajax('sdf.ajax');
+    })
+    $('.reg').on(function(){
+        ajax('');
+    })
+});
