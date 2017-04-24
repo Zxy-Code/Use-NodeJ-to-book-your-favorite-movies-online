@@ -1,9 +1,8 @@
 $(function(){
-    alert(2)
-    $('.login').on(function(){
-        $.ajax('sdf.ajax');
+    $('.login').on('click',function(){
+    	alert('This is login button')
     })
-    $('.reg').on(function(){
-        ajax('');
+    $('.reg').on('click',function(){
+    	alert('This is register button')
     })
 });
