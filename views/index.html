@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>首页</title>
+    <link rel="shortcut icon" href="/favicon.ico"/>
+	<link rel="bookmark" href="/favicon.ico"/>
     <link rel="stylesheet" href="../public/css/typo.css">
     <style>
         body{
@@ -35,7 +37,8 @@
             display: flex;
             justify-content:space-around;
         }
-        #button a {
+        #button span {
+            cursor: pointer;
             padding:0 44px;
             display: inline-block;
             color: #ffffff;
@@ -56,12 +59,12 @@
             <input id="password" type="password" name="password">
             <br>
             <div id="button">
-                <a class="login" href="javascript:void(0)">登录</a>
-                <a class="reg" href="javascript:void(0)">注册</a>
+                <span class="login" href="javascript:void(0)">登录</span>
+                <span class="reg" href="javascript:void(0)">注册</span>
             </div>
         </form>
     </div>
 </body>
 </html>
-<script src="../public/js/jquery.js"></script>
-<script src="../public/js/index.js"></script>
+<script src="../public/js/jquery.js" languge="javascript"></script>
+<script src="../public/js/index.js" languge="javascript"></script>
