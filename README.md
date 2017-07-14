@@ -2,6 +2,10 @@
 ## 工具
 - 后端：NodeJs
 - 前端：Js Html Css
+## 运行项目
+```
+node index.js
+```
 ## 课程
 - lesson1: 简单的构建一个nodejs的一个登录页面
 	- 问题
