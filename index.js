@@ -4,6 +4,8 @@ const stockServer = require('./stock-server/server.js');
 const path = require('path');
 const _url = require('url');
 const staticServer = require('./static-server/static-server.js');
+const handle = require('./router/router.js')
+const handlersServer = require('./router/routerServer.js')
 http.createServer((request,response)=>{
     console.log(request.url);
     let requestPathName = _url;
@@ -47,5 +49,26 @@ http.createServer((request,response)=>{
     //测试加入在页面中载入js
     // var script = fs.readFileSync('public/js/index.js');
     // console.log(script);
-    staticServer(request.url,request,response);
+
+    //获取请求路径
+    //
+    let pathname = _url.parse(request.url).pathname;
+    handlersServer.router(handle.getHandle(),pathname);
+
+    let postdata = '';
+    if(request.url.match('.ajax')){
+        request.addListener('data',function(postDataChunk){
+            postdata += postDataChunk;
+            console.log(postDataChunk)
+        })
+        console.log('post')
+        request.addListener("end", function() {
+          console.log('post')
+        });
+        console.log('postdata数据为：' + postdata)
+        
+    }else{
+        staticServer(request.url,request,response);
+    }
+    
 }).listen(8000);

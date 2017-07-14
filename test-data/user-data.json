@@ -1,0 +1,9 @@
+"user":{
+	"success":1,
+	"data":{
+		"zhangsan":{
+			"username":"zhangsan",
+			"password":"123456"
+		}
+	}
+}
