@@ -6,6 +6,8 @@ const _url = require('url');
 const staticServer = require('./static-server/static-server.js');
 const handle = require('./router/router.js')
 const handlersServer = require('./router/routerServer.js')
+
+
 http.createServer((request,response)=>{
     console.log(request.url);
     let requestPathName = _url;
@@ -53,7 +55,7 @@ http.createServer((request,response)=>{
     //获取请求路径
     //
     let pathname = _url.parse(request.url).pathname;
-    handlersServer.router(handle.getHandle(),pathname);
+    // handlersServer.router(handle.getHandle(),pathname,request.url,request,response);
 
     let postdata = '';
     if(request.url.match('.ajax')){
@@ -68,7 +70,11 @@ http.createServer((request,response)=>{
         console.log('postdata数据为：' + postdata)
         
     }else{
-        staticServer(request.url,request,response);
+        console.log(123)
+        console.log(pathname)
+        handlersServer.router(handle.getHandle(),pathname,request.url,request,response);
+
+        // staticServer(request.url,request,response);
     }
     
 }).listen(8000);

@@ -11,7 +11,7 @@ let filesLoad = (filepath,type,req,res) =>{
 				if(err){
 					throw err;
 				}else{
-					res.writeHead(200,{'content-type':match_format[type]});
+					res.writeHead(200,{'content-type':match_format.format[type]});
 					res.write(file,'binary');
 					res.end();
 				}

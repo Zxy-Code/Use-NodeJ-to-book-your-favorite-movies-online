@@ -11,6 +11,7 @@ let staticServer = (reqUrl,req,res) => {
 	console.log('cwd : ' + process.cwd());
 	//请求路径
 	let req_url = reqUrl;
+	console.log(11111111);
 	console.log(req_url);
 	//带域名的请求路径
 	let req_url_path = path.resolve(process.cwd()+req_url);
@@ -22,8 +23,10 @@ let staticServer = (reqUrl,req,res) => {
 	//文件请求
 	if (ext_name === ''){
 		console.log('ext_name为空')
-		let url = path.resolve(process.cwd(),'./views/index.html');
-        let body = stockServer(url);
+		let url = path.resolve(process.cwd(),'./views' + req_url + '.html');
+		console.log(url)
+        let body = stockServer(url,req_url);
+        console.log(body)
         res.writeHead(200,{'Content-Type':'text/html'});//注意这里的html，如果为plain则不会显示html，会将.html文件中的内容按字符串的形式输出
         res.write(body);
         res.end();

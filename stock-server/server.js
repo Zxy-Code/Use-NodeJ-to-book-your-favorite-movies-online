@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-let stockServer = (url)=>{
+let stockServer = (url, filename)=>{
     console.log(__dirname);
 
     //获取文件名
@@ -9,8 +9,15 @@ let stockServer = (url)=>{
         console.log(file)
         console.log(file.substring(0,file.indexOf('.')));
     })
-
-    let body = fs.readFileSync('./views/index.html');
+    console.log(filename);
+    let body;
+    if(filename === '/' || filename === ''){
+    	body = fs.readFileSync('./views/idnex.html');
+    }else{
+    	console.log('同步读取文件')
+    	body = fs.readFileSync('./views' + filename +'.html');
+    	console.log(body)
+    }
     return body;
 }
 

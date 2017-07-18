@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>详情页</title>
+	<link rel="stylesheet" href="../public/css/reset.css">
+	<link rel="stylesheet" href="../public/css/detail.css">
+</head>
+<body>
+	<header>
+		<h1>忆阑珊</h1>
+		<div class="protrait">
+			<img src="../public/img/protrait.png" alt="头像">
+		</div>
+	</header>
+	
+	<div class="titleNav">
+		<div class="goback">
+			<i></i>
+		</div>
+	</div>
+
+	<div id=detail>
+		<div class=detail-top>
+			<div class=list>
+				<div class=book>
+					<div class=listCover>
+						<img src="../public/img/jlbhd.jpg" alt="加勒比海盗5：死无对证"></div>
+					<div class=listCon>
+						<h2>加勒比海盗5：死无对证</h2>
+						<h3>动作 冒险 喜剧</h3>
+						<h3>美国 澳大利亚 | 129分钟</h3>
+						<h4 class="free-time  ">2017-05-26 在中国大陆上映</h4>
+						<h4 class="free-time">豆瓣评分：8.5</h4>
+						<!-- <div class=bookType>
+							<a href="/dpool/newbook/bookv1/cate_child.php?cate_id=1006004&amp;vt=4">总裁豪门</a>
+						</div> -->
+					</div>
+				</div>
+				<div class="popular">
+					<h3><em>10000</em>人气</h3>
+					<!-- <h3>小于1000人气</h3> -->
+				</div>
+			</div>
+			<!-- <div class=btn-block>
+				<a href="/dpool/newbook/bookv1/vipc.php?bid=5366155&amp;cid=10302175&amp;vt=4" class=d-read @click="read">继续阅读</a>
+				<a href=# class=d-add @click="shelf">加入书架</a>
+				<a href="{{download_url}}" class=d-offline>离线阅读</a>
+			</div> -->
+		</div>
+	</div>
+	<div class="detail-content mt10">
+		<div @click="showAll" class="content-main">
+			<p class="active">
+				这一次，时运耗尽的杰克船长发现令人闻风丧胆的“海上屠夫”萨拉查船长 （哈维尔·巴登 饰）竟率领着一众夺命亡灵水手逃出了百慕大三角区。他们扬言要杀尽世上所有的海盗，头号目标就是杰克船长（约翰尼·德普 饰）。要想改写命运，杰克船长唯一的希望就是找到传说中海神波塞冬的三叉戟，拥有它就能拥有统治整个海洋的力量！为了寻获这件神器，杰克船长被迫和聪明美丽的天文学家卡琳娜·史密斯（卡雅·斯考达里奥 饰）以及固执的年轻皇家海军亨利（布兰顿·思怀兹 饰）联手出击。航行着他那破破烂烂的“死海鸥号”，杰克船长不但决心要改变自己的厄运，同时也力求能从史上最狠毒可怕的敌人那里捡回一条命。
+			</p>
+		</div>
+		<div class="arrow-icon" @click="showAll">
+			<i id="content-arrow"></i>
+		</div>
+	</div>
+	<div class="other-nav">
+		<i></i>
+		<span>大家都在看</span>
+	</div>
+	<div class="other-movies">
+		<div class="list">
+	        <a class="book" href="<%= item.url %>">
+	            <div class="listCover">
+	                <!-- <div class="serial ser_{{item.serial}}" v-if="serial" >{{item.serial}}</div> -->
+	                <img src="../public/img/jlbhd.jpg" alt="封面">
+	            </div>
+	            <div class="listCon">
+	                <h2>加勒比海盗5：死无对证</h2>
+	                <span class="price">20.0 元起</span>
+	                <span class="wantNum">10000人想看</span>
+	                <h3>导演：乔阿吉姆·罗恩尼</h3>
+	                <h4>主演：约翰尼·德普 哈维尔·巴登</h4>
+	            </div>
+	        </a>
+	            <div class="iLike"></div>
+	            <!-- <div class="iLike active"></div> -->
+	            <!-- <div class="sort">
+	                <span><%= item.sort %></span>
+	            </div> -->
+	    </div>
+	    <div class="list">
+	        <a class="book" href="<%= item.url %>">
+	            <div class="listCover">
+	                <!-- <div class="serial ser_{{item.serial}}" v-if="serial" >{{item.serial}}</div> -->
+	                <img src="../public/img/sjbbb.jpg" alt="封面">
+	            </div>
+	            <div class="listCon">
+	                <h2>摔跤吧！爸爸</h2>
+	                <span class="price">20.0 元起</span>
+	                <span class="wantNum">10000人想看</span>
+	                <h3>导演：尼特什 提瓦瑞</h3>
+	                <h4>主演：阿米尔·汗 萨卡诗·泰瓦</h4>
+	            </div>
+	        </a>
+	            <div class="iLike"></div>
+	            <!-- <div class="iLike active"></div> -->
+	            <!-- <div class="sort">
+	                <span><%= item.sort %></span>
+	            </div> -->
+	    </div>
+	    <div class="list">
+	        <a class="book" href="<%= item.url %>">
+	            <div class="listCover">
+	                <!-- <div class="serial ser_{{item.serial}}" v-if="serial" >{{item.serial}}</div> -->
+	                <img src="../public/img/yxjq.jpg" alt="封面">
+	            </div>
+	            <div class="listCon">
+	                <h2>异星觉醒</h2>
+	                <span class="price">20.0 元起</span>
+	                <span class="wantNum">10000人想看</span>
+	                <h3>导演：丹尼尔·伊斯皮诺萨</h3>
+	                <h4>主演：杰克·吉伦哈尔</h4>
+	            </div>
+	        </a>
+	            <div class="iLike"></div>
+	            <!-- <div class="iLike active"></div> -->
+	            <!-- <div class="sort">
+	                <span><%= item.sort %></span>
+	            </div> -->
+	    </div>
+	    <div class="list">
+	        <a class="book" href="<%= item.url %>">
+	            <div class="listCover">
+	                <!-- <div class="serial ser_{{item.serial}}" v-if="serial" >{{item.serial}}</div> -->
+	                <img src="../public/img/yhhwd.jpg" alt="封面">
+	            </div>
+	            <div class="listCon">
+	                <h2>詹姆斯·古恩</h2>
+	                <span class="price">19.0 元起</span>
+	                <span class="wantNum">10000人想看</span>
+	                <h3>导演：詹姆斯·古恩</h3>
+	                <h4>主演：克里斯·帕拉特</h4>
+	            </div>
+	        </a>
+	            <div class="iLike"></div>
+	            <!-- <div class="iLike active"></div> -->
+	            <!-- <div class="sort">
+	                <span><%= item.sort %></span>
+	            </div> -->
+	    </div>
+	</div>
+	<script src="../public/js/jquery.js"></script>
+	<script src="../public/js/detail.js"></script>
+</body>
+</html>
